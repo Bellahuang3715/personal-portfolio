@@ -1,8 +1,8 @@
 import React from "react";
 import { TuneOutlined } from "@mui/icons-material";
-import Sidebar from "./Sidebar";
-import ChannelRow from "./ChannelRow";
-import VideoRow from "./VideoRow";
+import Sidebar from "../components/Sidebar/Sidebar";
+import ChannelRow from "../components/ChannelRow/ChannelRow";
+import VideoRow from "../components/VideoRow/VideoRow";
 
 import "./SearchPage.css";
 

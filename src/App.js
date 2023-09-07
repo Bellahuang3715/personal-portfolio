@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./Header";
-import Content from "./Content";
-import SearchPage from "./SearchPage";
+import Header from "./components/Header/Header";
+import HomePage from "./pages/HomePage";
+import SearchPage from "./pages/SearchPage";
 
 import "./App.css";
 
@@ -11,10 +11,9 @@ function App() {
     <div className="app">
       <Router>
         <Header />
-
         <Routes>
+          <Route path="/" element={<HomePage />} />
           <Route path="/search/:query" element={<SearchPage />} />
-          <Route path="/" element={<Content />} />
         </Routes>
 
       </Router>
