@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
-import HomePage from "./pages/HomePage";
-import SearchPage from "./pages/SearchPage";
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
+import Search from "./pages/Search";
 
 import "./App.css";
 
@@ -12,8 +13,9 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/search/:query" element={<SearchPage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/search/:query" element={<Search />} />
         </Routes>
 
       </Router>

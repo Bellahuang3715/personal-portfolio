@@ -2,9 +2,9 @@ import React from "react";
 import VideoCard from "../components/VideoCard/VideoCard";
 import Sidebar from "../components/Sidebar/Sidebar";
 
-import "./HomePage.css";
+import "./Home.css";
 
-function HomePage() {
+function Home() {
   return (
     <div className="app-page">
       <Sidebar />
@@ -32,4 +32,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Home;

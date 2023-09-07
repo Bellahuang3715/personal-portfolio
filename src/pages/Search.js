@@ -4,9 +4,9 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import ChannelRow from "../components/ChannelRow/ChannelRow";
 import VideoRow from "../components/VideoRow/VideoRow";
 
-import "./SearchPage.css";
+import "./Search.css";
 
-function SearchPage() {
+function Search() {
   return (
     <div className="app-page">
       <Sidebar />
@@ -40,4 +40,4 @@ function SearchPage() {
   );
 }
 
-export default SearchPage;
+export default Search;
