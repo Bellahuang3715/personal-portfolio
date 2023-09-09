@@ -1,4 +1,4 @@
-.card {
+.video-card {
     width: 270px;
     margin-bottom: 40px;
 }
@@ -6,6 +6,7 @@
 .card-thumbnail {
     height: 140px;
     width: 250px;
+    border-radius: 10px;
 }
 
 .card-info {

@@ -19,7 +19,7 @@ function ProfileCard() {
         <p>
           @Bellahuang3715 100 subscribers 10 videos
         </p>
-        <p>Hi, welcome to my channel</p>
+        <p>Computer Engineering @ UofT / System SWE Intern @ Qualcomm</p>
         <a href="https://www.linkedin.com/in/bella-huang3715/">https://www.linkedin.com/in/bella-huang3715/</a>
       </div>
     </div>

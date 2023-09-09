@@ -1,18 +1,16 @@
 import React from "react";
 import VideoCard from "../components/VideoCard/VideoCard";
-import Sidebar from "../components/Sidebar/Sidebar";
 
 import "./Home.css";
 
 function Home() {
   return (
     <div className="app-page">
-      <Sidebar />
       <div className="content">
         <h2>Recommended</h2>
         <div className="content-videos">
           <VideoCard
-            title="Software Developer"
+            title="Profile"
             views="2.2k"
             timestamp="3 days ago"
             profile="https://assets.pokemon.com/assets/cms2/img/pokedex/full/175.png"

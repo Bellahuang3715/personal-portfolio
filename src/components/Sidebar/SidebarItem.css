@@ -1,34 +1,31 @@
 .item {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 5px 40px 5px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .item-icon {
     color: #606060;
-    font-size: large !important;
 }
 
 .item-title {
     flex: 1;
     margin-left: 20px;
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 15px;
+    padding-top: 5px;
 }
 
 .item:hover {
-    background-color: lightgray;
+    background-color: whitesmoke;
     cursor: pointer;
-}
-
-.item:hover > .item-icon {
-    color: red;
 }
 
 .item:hover > .item-title {
     font-weight: bold;
 }
 
-.item-selected {
-    background-color: lightgray;
+.item .selected {
+    background-color: whitesmoke;
 }

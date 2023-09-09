@@ -1,5 +1,4 @@
 import React from "react";
-import Sidebar from "../components/Sidebar/Sidebar";
 import ProfileCard from "../components/ProfileCard";
 import FlagIcon from '@mui/icons-material/Flag';
 import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
@@ -9,7 +8,6 @@ import "./Profile.css";
 function Profile() {
   return (
     <div className="app-page">
-      <Sidebar />
       <div className="profile">
         <img
           className="profile-banner"
@@ -21,7 +19,7 @@ function Profile() {
           <div className="profile-body">
             <div className="left-col">
               <h4>Description</h4>
-              <p>This is a channel</p>
+              <p>Hi, my name is Bella and I am a Computer Engineering student at the University of Toronto</p>
               <hr />
               <h4>Details</h4>
               <p>Table here</p>
