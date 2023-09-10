@@ -4,7 +4,6 @@ import { db } from "../../api/firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 
 import ExperienceCard from "../../components/ExperienceCard/ExperienceCard";
-// import VideoRow from "../../components/VideoRow/VideoRow";
 
 import "./Experiences.css";
 
@@ -45,16 +44,6 @@ function Experiences() {
             </div>
           );
         })}
-
-        {/* <VideoRow
-          views="1.4M"
-          subs="100K"
-          description="This is a test block"
-          channel="Bella Huang"
-          timestamp="4 days ago"
-          title="Snake Game"
-          image="https://definicion.de/wp-content/uploads/2009/03/ingenieria-de-software.png"
-        /> */}
       </div>
     </div>
   );

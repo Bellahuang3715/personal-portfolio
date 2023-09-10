@@ -6,8 +6,6 @@ import './ExperienceCard.css';
 
 function ExperienceCard({ image, company, title, duration, description, tags }) {
 
-  console.log(description);
-
   const tagsList = tags.map((tag) => (
     <button className="button">
       {tag}

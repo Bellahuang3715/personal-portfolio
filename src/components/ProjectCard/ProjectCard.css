@@ -1,10 +1,14 @@
-.row {
-    display: flex;
-    margin-bottom: 30px;
-    max-width: 700px;
+.tags {
+    margin-bottom: 10px;
 }
 
-.row > img {
+.video-row {
+    display: flex;
+    margin-bottom: 30px;
+    /* max-width: 700px; */
+}
+
+.video-row > img {
     object-fit: contain;
     width: 246px;
     height: 138px;
