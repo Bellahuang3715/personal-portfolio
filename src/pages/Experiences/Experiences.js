@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { TuneOutlined } from "@mui/icons-material";
-import ChannelRow from "../components/ChannelRow/ChannelRow";
-import VideoRow from "../components/VideoRow/VideoRow";
+import ChannelRow from "../../components/ChannelRow/ChannelRow";
+import VideoRow from "../../components/VideoRow/VideoRow";
 
-import "./Search.css";
+import "./Experiences.css";
 
-function Search() {
+function Experiences() {
   const [experiences, setExperiences] = useState([]);
 
   useEffect(() => {
@@ -62,4 +62,4 @@ function Search() {
   );
 }
 
-export default Search;
+export default Experiences;

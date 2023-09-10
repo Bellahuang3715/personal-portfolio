@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileCard from "../components/ProfileCard";
+import ProfileCard from "../../components/ProfileCard";
 import FlagIcon from '@mui/icons-material/Flag';
 import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 

@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import './SidebarItem.css';
+import "./SidebarItem.css";
 
-function SidebarItem({ Icon, title, selected }) {
+function SidebarItem({ Icon, title, to, selected }) {
   return (
-    <div className={`item ${selected && "selected"}`}>
+    <Link to={to} className={`item ${selected && "selected"}`}>
       <Icon className="item-icon" />
       <h2 className="item-title">{title}</h2>
-    </div>
+    </Link>
   );
 }
 

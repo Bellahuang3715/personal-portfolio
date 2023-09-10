@@ -4,6 +4,8 @@
     padding: 5px 40px 5px 15px;
     border-radius: 10px;
     margin-bottom: 10px;
+    text-decoration: none;
+    color: inherit;
 }
 
 .item-icon {
