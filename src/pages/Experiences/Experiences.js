@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { TuneOutlined } from "@mui/icons-material";
+// import { TuneOutlined } from "@mui/icons-material";
 import { db } from "../../api/firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 
-import ChannelRow from "../../components/ChannelRow/ChannelRow";
-import VideoRow from "../../components/VideoRow/VideoRow";
+import ExperienceCard from "../../components/ExperienceCard/ExperienceCard";
+// import VideoRow from "../../components/VideoRow/VideoRow";
 
 import "./Experiences.css";
 
@@ -20,6 +20,8 @@ function Experiences() {
   }, []);
   console.log(experiences);
 
+  experiences.sort((a, b) => a.index - b.index);
+
   return (
     <div className="app-page">
       <div className="search-page">
@@ -31,7 +33,7 @@ function Experiences() {
         {experiences.map((exp) => {
           return (
             <div>
-              <ChannelRow
+              <ExperienceCard
                 image={exp.logo}
                 company={exp.company}
                 title={exp.title}
