@@ -2,6 +2,7 @@ import React from "react";
 import { Avatar } from "@mui/material";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
+import headshot from '../images/headshot.png';
 import './ProfileCard.css';
 
 function ProfileCard() {
@@ -10,7 +11,7 @@ function ProfileCard() {
       <Avatar
         className="channel-logo"
         alt="Bella Huang"
-        src="https://archives.bulbagarden.net/media/upload/thumb/b/bd/Latias_M05.png/1200px-Latias_M05.png"
+        src={headshot}
       />
       <div className="channel-text">
         <h2>

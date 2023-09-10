@@ -10,9 +10,13 @@
 }
 
 .header-logo {
-    height: 25px;
+    height: 40px;
     object-fit: contain;
     margin-left: 20px;
+}
+
+.header-left {
+    display: flex;
 }
 
 .header-input {
@@ -41,4 +45,8 @@
     background-color: #fafafa;
     border-left: 1px solid lightgray;
     color: gray;
+}
+
+.menu-icon-wrapper {
+    padding-top: 10px;
 }

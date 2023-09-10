@@ -3,6 +3,7 @@ import ProfileCard from "../../components/ProfileCard";
 import FlagIcon from '@mui/icons-material/Flag';
 import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 
+import banner from '../../images/banner.png';
 import "./Profile.css";
 
 function Profile() {
@@ -11,7 +12,7 @@ function Profile() {
       <div className="profile">
         <img
           className="profile-banner"
-          src="https://assets.website-files.com/622733c59bf20d8a074764f6/627a7569f1389244d2938298_pokemon-banner.png"
+          src={banner}
         />
         <div className="profile-content">
           <ProfileCard />

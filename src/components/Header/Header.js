@@ -7,6 +7,8 @@ import MicOutlinedIcon from '@mui/icons-material/MicOutlined';
 import { Avatar } from "@mui/material";
 import { Link } from "react-router-dom";
 
+import iTube from '../../images/iTube.png';
+import profile from '../../images/profile.png';
 import "./Header.css";
 
 function Header({ toggleSidebar }) {
@@ -20,7 +22,7 @@ function Header({ toggleSidebar }) {
         <Link to="/">
           <img
             className="header-logo"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/ 375px-YouTube_Logo_2017.svg.png"
+            src={iTube}
           />
         </Link>
       </div>
@@ -41,7 +43,7 @@ function Header({ toggleSidebar }) {
         <VideoCallIcon className="header-icon" />
         <NotificationsIcon className="header-icon" />
         <Avatar
-          src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/175.png"
+          src={profile}
           alt="Bella Huang"
         />
       </div>

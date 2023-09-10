@@ -1,30 +1,46 @@
-import React from "react";
-import VideoCard from "../../components/VideoCard/VideoCard";
+import React, { useState, useEffect } from "react";
+import { db } from "../../api/firebase-config";
+import { collection, getDocs } from "firebase/firestore";
+import PageCard from "../../components/PageCard/PageCard";
 
+import profile from '../../images/profile.png'
 import "./Home.css";
 
 function Home() {
+
+  const [pages, setPages] = useState([]);
+  const pageCollectionRef = collection(db, "Pages");
+
+  useEffect(() => {
+    const getPages = async () => {
+      const data = await getDocs(pageCollectionRef);
+      setPages(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+    getPages();
+  }, []);
+  console.log(pages);
+
+  pages.sort((a, b) => a.index - b.index);
+
   return (
     <div className="app-page">
       <div className="content">
         <h2>Recommended</h2>
         <div className="content-videos">
-          <VideoCard
-            to="/profile"
-            title="Profile"
-            views="2.2k"
-            timestamp="3 days ago"
-            profile="https://assets.pokemon.com/assets/cms2/img/pokedex/full/175.png"
-            channel="Bella Huang"
-            image="https://img.redbull.com/images/c_fill,g_auto,w_830,h_553/q_auto:low,f_auto/redbullcom/2016/09/20/1331818966444_2/pok%C3%A9mon-super-mystery-dungeon"
-          />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
+        {pages.map((page) => {
+          return (
+            <div>
+              <PageCard
+                title={page.title}
+                subtitle={page.subtitle}
+                to={page.route}
+                thumbnail={page.thumbnail}
+                channel="Bella Huang"
+                profile={profile}
+              />
+            </div>
+          );
+        })}
         </div>
       </div>
     </div>
