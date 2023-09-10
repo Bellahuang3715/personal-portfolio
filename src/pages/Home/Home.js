@@ -10,6 +10,7 @@ function Home() {
         <h2>Recommended</h2>
         <div className="content-videos">
           <VideoCard
+            to="/profile"
             title="Profile"
             views="2.2k"
             timestamp="3 days ago"

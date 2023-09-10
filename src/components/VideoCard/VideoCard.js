@@ -1,12 +1,15 @@
 import React from 'react'
 import { Avatar } from '@mui/material'
+import { Link } from 'react-router-dom';
 
 import './VideoCard.css';
 
-function VideoCard({ title, image, channel, views, timestamp, profile }) {
+function VideoCard({ to, title, image, channel, views, timestamp, profile }) {
   return (
     <div className="video-card">
-        <img className="card-thumbnail" src={image} alt=""/>
+        <Link to={to}>
+            <img className="card-thumbnail" src={image} alt=""/>
+        </Link>
         <div className='card-info'>
             <Avatar 
                 className='card-avatar'

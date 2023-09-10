@@ -11,8 +11,8 @@ import "./Sidebar.css";
 function Sidebar({ isOpen }) {
   return (
     <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
-      <SidebarItem Icon={HomeOutlinedIcon} title="Home" to="/" selected />
-      <SidebarItem Icon={SubscriptionsOutlinedIcon} title="Profile" to="/profile" selected />
+      <SidebarItem Icon={HomeOutlinedIcon} title="Home" to="/" />
+      <SidebarItem Icon={SubscriptionsOutlinedIcon} title="Profile" to="/profile" />
       <SidebarItem Icon={HistoryOutlinedIcon} title="Experiences" to="experiences" />
       <SidebarItem Icon={VideoLibraryOutlinedIcon} title="Projects" to="/projects" selected />
       <SidebarItem Icon={PlaylistPlayOutlinedIcon} title="More" to="more" />

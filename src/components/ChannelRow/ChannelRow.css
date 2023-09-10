@@ -1,11 +1,27 @@
+.button {
+    background-color: #606060;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 15px 5px 15px 5px;
+    margin: 0.125rem;
+}
+
+.tags {
+    margin-bottom: 10px;
+}
+
 .channel {
     display: flex;
     align-items: center;
-    width: 70%;
+    /* width: 70%; */
 }
 
 .channel-text {
-    display: flex;
     flex-direction: column;
 }
 
