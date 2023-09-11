@@ -17,7 +17,6 @@ function Experiences() {
     };
     getExperiences();
   }, []);
-  console.log(experiences);
 
   experiences.sort((a, b) => a.index - b.index);
 

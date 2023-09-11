@@ -2,7 +2,9 @@ import React from 'react'
 
 function More() {
   return (
-    <div>More</div>
+    <div>
+      <h1>WORKING ON UPDATE</h1>
+    </div>
   )
 }
 

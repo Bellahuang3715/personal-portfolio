@@ -3,9 +3,13 @@ import { db } from "../../api/firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
+import './Projects.css';
+
 function Projects() {
+
   const [projects, setProjects] = useState([]);
   const projectCollectionRef = collection(db, "Projects");
+
   useEffect(() => {
     const getProjects = async () => {
       const data = await getDocs(projectCollectionRef);
@@ -13,29 +17,29 @@ function Projects() {
     };
     getProjects();
   }, []);
-  console.log(projects);
 
   projects.sort((a, b) => a.index - b.index);
-  console.log(projects);
-
 
   return (
-    <div>
-      {projects.map((proj) => {
-        return (
-          <div>
-            <ProjectCard
-              name={proj.name}
-              duration={proj.duration}
-              tags={proj.tags}
-              description="This is a test block"
-              title="Snake Game"
-              image="https://definicion.de/wp-content/uploads/2009/03/ingenieria-de-software.png"
-            />
-            <hr />
-          </div>
-        );
-      })}
+    <div className="app-page">
+      <div className="projects-page">
+        {projects.map((proj) => {
+          return (
+            <div>
+              <ProjectCard
+                name={proj.name}
+                duration={proj.duration}
+                tags={proj.tags}
+                description={proj.description}
+                image={
+                  "https://definicion.de/wp-content/uploads/2009/03/ingenieria-de-software.png"
+                }
+              />
+              <hr />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

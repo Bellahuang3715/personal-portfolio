@@ -3,11 +3,10 @@ import { db } from "../../api/firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 import PageCard from "../../components/PageCard/PageCard";
 
-import profile from '../../images/profile.png'
+import profile from "../../images/profile.png";
 import "./Home.css";
 
 function Home() {
-
   const [pages, setPages] = useState([]);
   const pageCollectionRef = collection(db, "Pages");
 
@@ -27,21 +26,24 @@ function Home() {
       <div className="content">
         <h2>Recommended</h2>
         <div className="content-videos">
-        {pages.map((page) => {
-          return (
-            <div>
-              <PageCard
-                title={page.title}
-                subtitle={page.subtitle}
-                to={page.route}
-                thumbnail={page.thumbnail}
-                channel="Bella Huang"
-                profile={profile}
-              />
-            </div>
-          );
-        })}
+          {pages.map((page) => {
+            return (
+              <div>
+                <PageCard
+                  title={page.title}
+                  subtitle={page.subtitle}
+                  to={page.route}
+                  thumbnail={page.thumbnail}
+                  channel="Bella Huang"
+                  profile={profile}
+                />
+              </div>
+            );
+          })}
         </div>
+        <button className="button-disclaimer">
+          <b>Disclaimer:</b> This website is currently undergoing major reconstruction thus some images do not reflect the actual product/component it is referring to and some components may not line up very nicely. These will be updated ASAP! Until then, I apologize for some inaccuries in the images presented and any other potential issues/bugs you may encounter while navigating the website!
+        </button>
       </div>
     </div>
   );

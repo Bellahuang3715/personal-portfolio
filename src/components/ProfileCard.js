@@ -18,10 +18,13 @@ function ProfileCard() {
           Bella Huang <CheckCircleIcon />
         </h2>
         <p>
-          @Bellahuang3715 100 subscribers 10 videos
+          @Bellahuang3715 8 relevant experiences | 9 projects
         </p>
         <p>Computer Engineering @ UofT / System SWE Intern @ Qualcomm</p>
+        <p>
         <a href="https://www.linkedin.com/in/bella-huang3715/">https://www.linkedin.com/in/bella-huang3715/</a>
+
+        </p>
       </div>
     </div>
   );
