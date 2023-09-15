@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import VideoCallIcon from "@mui/icons-material/VideoCall";
-import NotificationsIcon from "@mui/icons-material/Notifications";
+import VideoCallOutlinedIcon from '@mui/icons-material/VideoCallOutlined';
+import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import MicOutlinedIcon from '@mui/icons-material/MicOutlined';
 import { Avatar } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -38,10 +38,10 @@ function Header({ toggleSidebar }) {
           <SearchIcon className="header-search-icon" />
         </Link>
       </div>
-      <MicOutlinedIcon />
+      <MicOutlinedIcon className="header-icon-mic"/>
       <div className="header-icons">
-        <VideoCallIcon className="header-icon" />
-        <NotificationsIcon className="header-icon" />
+        <VideoCallOutlinedIcon className="header-icon" />
+        <NotificationsOutlinedIcon className="header-icon" />
         <Avatar
           src={profile}
           alt="Bella Huang"

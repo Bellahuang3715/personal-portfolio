@@ -1,52 +1,71 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
 }
 
 .header-logo {
-    height: 40px;
-    object-fit: contain;
-    margin-left: 20px;
+  height: 40px;
+  object-fit: contain;
+  margin-left: 20px;
 }
 
 .header-left {
-    display: flex;
+  display: flex;
 }
 
 .header-input {
-    display: flex;
-    align-items: center;
-    width: 40%;
-    border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  width: 40%;
+  border: 1px solid black;
 }
 
 .header-icons {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .header-icon {
-    margin-right: 8px;
+  margin-right: 20px;
 }
 
 .header-input > input {
-    flex: 1;
-    border: none;
+  flex: 1;
+  border: none;
 }
 
 .header-search-icon {
-    width: 50px !important;
-    background-color: #fafafa;
-    border-left: 1px solid lightgray;
-    color: gray;
+  border-radius: 0 20px 20px 0;
+  width: 50px !important;
+  background-color: #fafafa;
+  border-left: 1px solid lightgray;
+  color: gray;
+}
+
+.header-icon-mic {
+  background-color: #fafafa;
+  border-radius: 100%;
+  border: 20px;
 }
 
 .menu-icon-wrapper {
-    padding-top: 10px;
+  padding-top: 10px;
+}
+
+input[type="text"] {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px 0 0 20px;
+  /* border: 1px solid #2d9fd9; */
+  color: #a0d18c;
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
 }
