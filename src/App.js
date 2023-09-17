@@ -4,7 +4,7 @@ import Home from "./pages/Home/Home";
 import Profile from "./pages/Profile/Profile";
 import Experiences from "./pages/Experiences/Experiences";
 import Projects from "./pages/Projects/Projects";
-import More from "./pages/More/More";
+import Education from "./pages/Education/Education";
 import Layout from "./pages/Layout";
 
 import "./App.css";
@@ -21,7 +21,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/experiences" element={<Experiences />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/more" element={<More />} />
+            <Route path="/education" element={<Education />} />
           </Routes>
         </Layout>
       </Router>

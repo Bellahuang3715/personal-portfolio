@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import VideoCallOutlinedIcon from '@mui/icons-material/VideoCallOutlined';
-import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
-import MicOutlinedIcon from '@mui/icons-material/MicOutlined';
+import VideoCallOutlinedIcon from "@mui/icons-material/VideoCallOutlined";
+import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
+import MicOutlinedIcon from "@mui/icons-material/MicOutlined";
 import { Avatar } from "@mui/material";
 import { Link } from "react-router-dom";
 
-import iTube from '../../images/iTube.png';
-import profile from '../../images/profile.png';
+import iTube from "../../images/iTube.png";
+import profile from "../../images/profile.png";
 import "./Header.css";
 
 function Header({ toggleSidebar }) {
@@ -20,10 +20,7 @@ function Header({ toggleSidebar }) {
           <MenuIcon />
         </div>
         <Link to="/">
-          <img
-            className="header-logo"
-            src={iTube}
-          />
+          <img className="header-logo" src={iTube} />
         </Link>
       </div>
 
@@ -38,14 +35,13 @@ function Header({ toggleSidebar }) {
           <SearchIcon className="header-search-icon" />
         </Link>
       </div>
-      <MicOutlinedIcon className="header-icon-mic"/>
+      <MicOutlinedIcon className="header-icon-mic" />
       <div className="header-icons">
         <VideoCallOutlinedIcon className="header-icon" />
         <NotificationsOutlinedIcon className="header-icon" />
-        <Avatar
-          src={profile}
-          alt="Bella Huang"
-        />
+        <Link to="/profile">
+          <Avatar src={profile} alt="Bella Huang" />
+        </Link>
       </div>
     </div>
   );

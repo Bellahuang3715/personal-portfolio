@@ -1,0 +1,27 @@
+.app-page {
+    display: flex;
+}
+
+.search-page {
+    flex: 0.8;
+    background-color: #f9f9f9;
+    padding: 20px 20px;
+}
+
+.courses-table {
+    margin-bottom: 30px !important;
+}
+
+.courses {
+    background-color: blue;
+    font-size: 14px;
+    display: flex;
+}
+
+.fall {
+    background-color: #ee6e5b;
+}
+
+.winter {
+    background-color: #3e9ea3;
+}
