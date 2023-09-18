@@ -29,6 +29,7 @@ function Projects() {
               <ProjectCard
                 name={proj.name}
                 duration={proj.duration}
+                current={proj.current}
                 tags={proj.tags}
                 description={proj.description}
                 image={

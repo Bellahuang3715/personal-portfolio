@@ -62,6 +62,7 @@ function Experiences() {
                 company={exp.company}
                 title={exp.title}
                 duration={exp.duration}
+                current={exp.current}
                 tags={exp.tags}
                 description={exp.description}
               />
@@ -80,6 +81,7 @@ function Experiences() {
                 company={exp.company}
                 title={exp.title}
                 duration={exp.duration}
+                current={exp.current}
                 description={exp.description}
               />
               <hr />
