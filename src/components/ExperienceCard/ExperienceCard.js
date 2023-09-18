@@ -6,7 +6,7 @@ import './ExperienceCard.css';
 
 function ExperienceCard({ image, company, title, duration, description, tags }) {
 
-  const tagsList = tags.map((tag) => (
+  const tagsList = tags && tags.map((tag) => (
     <button className="button">
       {tag}
     </button>
