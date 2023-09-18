@@ -13,6 +13,7 @@ function Experiences() {
   const [techExp, setTechExp] = useState([]);
   const [otherExp, setOtherExp] = useState([]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const expCollectionRef = collection(db, "Experiences");
 
   useEffect(() => {

@@ -32,9 +32,7 @@ function Projects() {
                 current={proj.current}
                 tags={proj.tags}
                 description={proj.description}
-                image={
-                  "https://definicion.de/wp-content/uploads/2009/03/ingenieria-de-software.png"
-                }
+                image={proj.image}
               />
               <hr />
             </div>

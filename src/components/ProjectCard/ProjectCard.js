@@ -9,7 +9,7 @@ function ProjectCard({ name, duration, current, tags, description, image }) {
 
   return (
     <div className="video-row">
-      <img src={image} alt="" />
+      <img className="video-img" src={image} alt="" />
       <div className="row-text">
         <h3>
           {name}{" "}

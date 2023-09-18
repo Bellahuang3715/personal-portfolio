@@ -18,7 +18,7 @@ function ProfileCard() {
           Bella Huang <CheckCircleIcon />
         </h2>
         <p>
-          @Bellahuang3715 8 relevant experiences | 9 projects
+          @Bellahuang3715 9 experiences | 9 projects listed
         </p>
         <p>Computer Engineering @ UofT / System SWE Intern @ Qualcomm</p>
         <p>

@@ -8,14 +8,14 @@
     /* max-width: 700px; */
 }
 
-.video-row > img {
-    object-fit: contain;
-    width: 246px;
-    height: 138px;
+.video-img {
+    object-fit: cover;
+    width: 246px !important;
+    /* height: 138px !important; */
 }
 
 .row-text {
-    margin-left: 14px;
+    margin-left: 35px;
 }
 
 .row-description {
