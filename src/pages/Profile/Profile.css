@@ -29,3 +29,19 @@
     flex: 3;
     padding: 20px;
 }
+
+.stats {
+    margin-bottom: 50px;
+}
+
+.skills > h5 {
+    margin-top: 25px;
+}
+
+.skills-chip {
+    background-color: #ee6e5b !important;
+}
+
+.left-col .table {
+    --bs-table-bg: transparent !important;
+}

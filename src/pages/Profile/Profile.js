@@ -12,7 +12,10 @@ import "./Profile.css";
 
 function Profile() {
   const [achievements, setAchievements] = useState([]);
+  const [profile, setProfile] = useState([]);
+
   const achivementsCollectionRef = collection(db, "Achievements");
+  const profileCollectionRef = collection(db, "Profile");
 
   useEffect(() => {
     const getAchievements = async () => {
@@ -25,8 +28,21 @@ function Profile() {
         console.error("Error fetching data:", error);
       }
     };
+
+    const getProfile = async () => {
+      try {
+        const data = await getDocs(profileCollectionRef);
+        setProfile(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
     getAchievements();
-  }, []);
+    getProfile();
+  }, [achivementsCollectionRef, profileCollectionRef]);
+
+  achievements.sort((a, b) => a.index - b.index);
 
   return (
     <div className="app-page">
@@ -84,12 +100,37 @@ function Profile() {
               </Table>
             </div>
             <div className="right-col">
-              <h4>Stats</h4>
-              <hr />
-              <p>Joined Sep 1, 2023</p>
-              <p>100 views</p>
-              <FlagIcon />
-              <ReplyOutlinedIcon />
+              <div className="stats">
+                <h4>Stats</h4>
+                <hr />
+                <p>Joined Sep 1, 2023</p>
+                <p>100 views</p>
+                <FlagIcon />
+                <ReplyOutlinedIcon />
+              </div>
+
+              <div className="skills">
+                <h4>Skills</h4>
+                <hr />
+                <h5>Spoken Languages</h5>
+                {profile[0]?.spoken?.map((skill, index) => (
+                  <button className="button skills-chip" key={index}>
+                    {skill}
+                  </button>
+                ))}
+                <h5>Coding Languages</h5>
+                {profile[0]?.coding?.map((skill, index) => (
+                  <button className="button skills-chip" key={index}>
+                    {skill}
+                  </button>
+                ))}
+                <h5>Tehnical Skills</h5>
+                {profile[0]?.technical?.map((skill, index) => (
+                  <button className="button skills-chip" key={index}>
+                    {skill}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
