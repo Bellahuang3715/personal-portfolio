@@ -1,5 +1,9 @@
-import React from "react";
-import ProfileCard from "../../components/ProfileCard";
+import React, { useState, useEffect } from "react";
+import { db } from "../../api/firebase-config";
+import { collection, getDocs } from "firebase/firestore";
+import { Table } from "react-bootstrap";
+
+import ProfileCard from "../../components/ProfileCard/ProfileCard";
 import FlagIcon from "@mui/icons-material/Flag";
 import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 
@@ -7,6 +11,23 @@ import banner from "../../images/banner.png";
 import "./Profile.css";
 
 function Profile() {
+  const [achievements, setAchievements] = useState([]);
+  const achivementsCollectionRef = collection(db, "Achievements");
+
+  useEffect(() => {
+    const getAchievements = async () => {
+      try {
+        const data = await getDocs(achivementsCollectionRef);
+        setAchievements(
+          data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+        );
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    getAchievements();
+  }, []);
+
   return (
     <div className="app-page">
       <div className="profile">
@@ -30,7 +51,7 @@ function Profile() {
               <hr />
               <h4>Links</h4>
               <p>
-                Linkedin:
+                LinkedIn:
                 <a href="https://www.linkedin.com/in/bella-huang3715/">
                   https://www.linkedin.com/in/bella-huang3715/
                 </a>
@@ -41,6 +62,26 @@ function Profile() {
                   https://github.com/Bellahuang3715
                 </a>
               </p>
+              <hr />
+              <h4>Achievements</h4>
+              <Table striped hover className="courses-table">
+                <thead>
+                  <tr>
+                    <th style={{ width: "50%" }}>Item</th>
+                    <th style={{ width: "30%" }}>Source</th>
+                    <th style={{ width: "20%" }}>Year</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {achievements.map((item, index) => (
+                    <tr key={index}>
+                      <td>{item.title}</td>
+                      <td>{item.source}</td>
+                      <td>{item.year}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
             </div>
             <div className="right-col">
               <h4>Stats</h4>

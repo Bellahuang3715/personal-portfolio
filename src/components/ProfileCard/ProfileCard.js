@@ -2,7 +2,7 @@ import React from "react";
 import { Avatar } from "@mui/material";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
-import headshot from '../images/headshot.png';
+import headshot from '../../images/headshot.png';
 import './ProfileCard.css';
 
 function ProfileCard() {

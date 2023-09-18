@@ -17,7 +17,6 @@ function Home() {
     };
     getPages();
   }, []);
-  console.log(pages);
 
   pages.sort((a, b) => a.index - b.index);
 
