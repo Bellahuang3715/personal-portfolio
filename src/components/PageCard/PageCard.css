@@ -1,8 +1,12 @@
-
 .video-card {
     width: 270px;
-    margin-bottom: 40px;
+    margin: 20px 15px 50px 20px;
+    transition: transform .2s;
 }
+
+.video-card:hover {
+    transform: scale(1.1);
+  }
 
 .card-thumbnail {
     height: 140px;
@@ -28,6 +32,15 @@
 .card-text > p {
     font-size: 14px;
     color: gray;
+}
+
+.check-icon {
+    display: contents;
+}
+
+.check-icon .css-i4bv87-MuiSvgIcon-root {
+    height: 0.60em !important;
+    width: 0.60em !important;
 }
 
 .card-avatar {

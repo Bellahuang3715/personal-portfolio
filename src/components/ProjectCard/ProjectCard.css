@@ -10,8 +10,9 @@
 
 .video-img {
     object-fit: cover;
-    width: 246px !important;
+    width: 300px !important;
     /* height: 138px !important; */
+    border-radius: 15px;
 }
 
 .row-text {

@@ -16,7 +16,7 @@ function ProjectCard({ name, duration, current, tags, description, image }) {
           {current && (
             <Tooltip
               arrow
-              title="Current Project"
+              title="Ongoing Project"
               placement="right"
               TransitionComponent={Zoom}
             >
