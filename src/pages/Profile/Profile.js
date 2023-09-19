@@ -106,7 +106,7 @@ function Profile() {
                 <p>Joined Sep 1, 2023</p>
                 <p>100 views</p>
                 <FlagIcon />
-                <ReplyOutlinedIcon />
+                <ReplyOutlinedIcon className="icon-reply"/>
               </div>
 
               <div className="skills">

@@ -45,3 +45,8 @@
 .left-col .table {
     --bs-table-bg: transparent !important;
 }
+
+.icon-reply {
+    transform: scaleX(-1);
+    margin-left: 10px;
+}
